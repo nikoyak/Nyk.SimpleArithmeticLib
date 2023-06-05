@@ -12,7 +12,7 @@ module SayTests =
             testCase "Add two integers"
             <| fun _ ->
                 let subject = Say.add 1 2
-                Expect.equal subject 4 "Addition works"
+                Expect.equal subject 3 "Addition works"
             testCase "Say nothing"
             <| fun _ ->
                 let subject = Say.nothing ()
