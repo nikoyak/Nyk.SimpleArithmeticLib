@@ -1,0 +1,16 @@
+<Project>
+    <PropertyGroup>
+        <PackageTags>f#, fsharp</PackageTags>
+        <PackageProjectUrl>https://github.com/nikoyak/Nyk.SimpleArithmeticLib</PackageProjectUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile> <!--https://docs.microsoft.com/en-gb/nuget/reference/msbuild-targets#packagereadmefile -->
+        <RepositoryType>git</RepositoryType>
+        <Authors>nikoyak</Authors>
+        <RepositoryUrl>https://github.com/nikoyak/Nyk.SimpleArithmeticLib</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="/"/>    
+        <None Include="$(MSBuildThisFileDirectory)LICENSE.md" Pack="true" PackagePath="/"/>    
+    </ItemGroup>
+</Project>
