@@ -4,20 +4,20 @@ open System.Reflection
 
 [<assembly: AssemblyTitleAttribute("Nyk.SimpleArithmeticLib")>]
 [<assembly: AssemblyProductAttribute("Nyk.SimpleArithmeticLib")>]
-[<assembly: AssemblyVersionAttribute("1.0.2")>]
+[<assembly: AssemblyVersionAttribute("1.0.3")>]
 [<assembly: AssemblyMetadataAttribute("ReleaseDate","2023-06-06T00:00:00.0000000+03:00")>]
-[<assembly: AssemblyFileVersionAttribute("1.0.2")>]
-[<assembly: AssemblyInformationalVersionAttribute("1.0.2")>]
+[<assembly: AssemblyFileVersionAttribute("1.0.3")>]
+[<assembly: AssemblyInformationalVersionAttribute("1.0.3")>]
 [<assembly: AssemblyMetadataAttribute("ReleaseChannel","release")>]
-[<assembly: AssemblyMetadataAttribute("GitHash","7423727c3da6f263f5227b4fc9f626233a13605c")>]
+[<assembly: AssemblyMetadataAttribute("GitHash","096089d52ff906f69ba29d98830d5bf00d4a480b")>]
 do ()
 
 module internal AssemblyVersionInformation =
     let [<Literal>] AssemblyTitle = "Nyk.SimpleArithmeticLib"
     let [<Literal>] AssemblyProduct = "Nyk.SimpleArithmeticLib"
-    let [<Literal>] AssemblyVersion = "1.0.2"
+    let [<Literal>] AssemblyVersion = "1.0.3"
     let [<Literal>] AssemblyMetadata_ReleaseDate = "2023-06-06T00:00:00.0000000+03:00"
-    let [<Literal>] AssemblyFileVersion = "1.0.2"
-    let [<Literal>] AssemblyInformationalVersion = "1.0.2"
+    let [<Literal>] AssemblyFileVersion = "1.0.3"
+    let [<Literal>] AssemblyInformationalVersion = "1.0.3"
     let [<Literal>] AssemblyMetadata_ReleaseChannel = "release"
-    let [<Literal>] AssemblyMetadata_GitHash = "7423727c3da6f263f5227b4fc9f626233a13605c"
+    let [<Literal>] AssemblyMetadata_GitHash = "096089d52ff906f69ba29d98830d5bf00d4a480b"
