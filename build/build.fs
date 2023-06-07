@@ -403,10 +403,12 @@ let dotnetTest ctx =
         |> Seq.map IO.Path.GetFileNameWithoutExtension
         |> String.concat "|"
 
+    let isGenerateCoverageReport = ctx.Context.TryFindTarget("GenerateCoverageReport").IsSome
+
     let args = [
         "--no-build"
-        sprintf "/p:AltCover=%b" (not disableCodeCoverage)
-        sprintf "/p:AltCoverThreshold=%d" coverageThresholdPercent
+        sprintf "/p:AltCover=%b" (not disableCodeCoverage || isGenerateCoverageReport)
+        if not isGenerateCoverageReport then sprintf "/p:AltCoverThreshold=%d" coverageThresholdPercent
         sprintf "/p:AltCoverAssemblyExcludeFilter=%s" excludeCoverage
         "/p:AltCoverLocalSource=true"
     ]
@@ -769,6 +771,9 @@ let initTargets () =
 
     "DotnetBuild"
     ==>! "WatchDocs"
+
+    "DotnetTest"
+    ==>! "GenerateCoverageReport"
 
     "UpdateChangelog"
     ==> "GenerateAssemblyInfo"
